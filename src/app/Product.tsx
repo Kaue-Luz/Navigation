@@ -20,7 +20,7 @@ export function Product() {
       <Header>
         <ButtonIcon
           name="arrow-circle-left"
-          onPress={() => navigation.goBack}
+          onPress={() => navigation.navigate("home")}
         />
         <Title>Product</Title>
       </Header>
