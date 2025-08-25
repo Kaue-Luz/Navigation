@@ -8,11 +8,11 @@ import { Home } from "@/app/Home";
 
 export type StackRoutesList = {
   home: undefined;
-  product: undefined;
+  product: undefined | { id: string };
 };
 
 export type StackRoutesProps<T extends keyof StackRoutesList> =
-  NativeStackScreenProps<StackRoutesList>;
+  NativeStackScreenProps<StackRoutesList, T>;
 
 const Stack = createNativeStackNavigator<StackRoutesList>();
 
