@@ -1,13 +1,15 @@
 import { View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+import { StackRoutesList } from "@/routes/StackRoutes";
 
 import { Header } from "@/components/Header";
 import { Title } from "@/components/Title";
 import { ButtonIcon } from "@/components/ButtonIcon";
 
-export function Product() {
-  const navigation = useNavigation();
+type Props = NativeStackScreenProps<StackRoutesList, "product">;
 
+export function Product({ navigation }: Props) {
   return (
     <View
       style={{
@@ -20,7 +22,7 @@ export function Product() {
       <Header>
         <ButtonIcon
           name="arrow-circle-left"
-          onPress={() => navigation.navigate("home")}
+          onPress={() => navigation.goBack()}
         />
         <Title>Product</Title>
       </Header>
