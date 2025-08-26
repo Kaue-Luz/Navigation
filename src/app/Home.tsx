@@ -19,7 +19,10 @@ export function Home({ navigation }: DrawerRoutesProps<"home">) {
       }}
     >
       <Header>
+        <ButtonIcon name="menu" onPress={() => navigation.toggleDrawer()} />
+
         <Title>Home</Title>
+
         <ButtonIcon
           name="add-circle"
           onPress={() => navigation.navigate("product", { id: "145" })}
